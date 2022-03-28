@@ -84,7 +84,6 @@ public class Weapon : MonoBehaviour
         Vector3 playerPosition = gameObject.transform.position;
         float differenceX = playerPosition.x - mousePosition.x;
         float differenceY = playerPosition.y - mousePosition.y;
-        float differenceY = playerPosition.y - mousePosition.y;
         if (differenceX > 3 || differenceX < -3)
         {
            if(differenceX > 0)
