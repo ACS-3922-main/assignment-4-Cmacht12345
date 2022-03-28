@@ -8,7 +8,9 @@ public class ItemData : ScriptableObject
     public enum ItemType
     {
         Coin,
-        Health
+        Health,
+        Watermelon,
+        Cookie
     }
 
     [SerializeField] private string _objectName;

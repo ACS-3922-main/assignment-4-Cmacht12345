@@ -175,4 +175,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a83f75956c0f4104e8d3999271498cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _slotPrefab: {fileID: 7475194507252724211, guid: 8b4f1033036a70947a05bd0fa0d1794e, type: 3}
+  _slotPrefab: {fileID: 752598856388656826, guid: 8b4f1033036a70947a05bd0fa0d1794e, type: 3}

@@ -4,7 +4,8 @@ using System.Collections;
 public enum CharacterCategory
 {
     Player,
-    Enemy
+    Enemy,
+    Watermelon
 }
 
 public abstract class Character : MonoBehaviour

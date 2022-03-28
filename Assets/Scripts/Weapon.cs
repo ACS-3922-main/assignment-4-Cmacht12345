@@ -81,6 +81,32 @@ public class Weapon : MonoBehaviour
         Vector3 mousePosition =
         Camera.main.ScreenToWorldPoint(Input.mousePosition);
         GameObject ammo = SpawnAmmo(transform.position);
+        Vector3 playerPosition = gameObject.transform.position;
+        float differenceX = playerPosition.x - mousePosition.x;
+        float differenceY = playerPosition.y - mousePosition.y;
+        float differenceY = playerPosition.y - mousePosition.y;
+        if (differenceX > 3 || differenceX < -3)
+        {
+           if(differenceX > 0)
+            {
+                mousePosition.x = mousePosition.x + 1f;
+            }
+            else if (differenceX < 0)
+            {
+                mousePosition.x = mousePosition.x - 1f;
+            }
+        }
+        else if(differenceY > 3 || differenceY < -3) 
+        {
+            if (differenceY > 0)
+            {
+                mousePosition.y = mousePosition.y + 1f;
+            }
+            else if (differenceY < 0)
+            {
+                mousePosition.y = mousePosition.x - 1f;
+            }
+        }
         if (ammo != null)
         {
             Arc arcScript = ammo.GetComponent<Arc>();

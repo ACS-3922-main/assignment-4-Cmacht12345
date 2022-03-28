@@ -7,6 +7,7 @@ public class Player : Character{
     [SerializeField] Inventory _inventoryPrefab;
     private Inventory _inventory;
     [SerializeField] protected HitPoints _hitPoints;
+    private bool _levelComplete = false;
 
     public override void ResetCharacter()
     {
@@ -18,6 +19,19 @@ public class Player : Character{
     private void OnEnable()
     {
         ResetCharacter();
+    }
+
+    void Update() 
+    {
+        float pos = transform.position.x;
+        GameObject ground = GameObject.Find("GroundLayer");
+        ground.GetComponent<ConfineCamera>().ChangeConfiner(pos);
+        if(pos > 27 && _levelComplete == false)
+        {
+            Debug.Log("Level Complete");
+            _levelComplete = true;
+            Application.Quit();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -38,6 +52,14 @@ public class Player : Character{
                     case ItemData.ItemType.Health:
                         shouldDisappear =
                         AdjustHitPoints(hitObject.Quantity);
+                        break;
+                    case ItemData.ItemType.Watermelon:
+                        int difference = (int)_maxHitPoints - (int)_hitPoints.Value;
+                        shouldDisappear =
+                        AdjustHitPoints(difference);
+                        break;
+                    case ItemData.ItemType.Cookie:
+                        shouldDisappear = _inventory.AddItem(hitObject);
                         break;
                 }
                 if (shouldDisappear)
