@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - PickUp
+  - VirtualCamera
+  - MyEnemy
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - Blocking
   - Enemies
   - Consumables
-  - 
+  - Ammo
   - 
   - 
   - 
@@ -51,4 +53,10 @@ TagManager:
     locked: 0
   - name: Characters
     uniqueID: 1657678777
+    locked: 0
+  - name: UI
+    uniqueID: 288593233
+    locked: 0
+  - name: Ammo
+    uniqueID: 1143966905
     locked: 0

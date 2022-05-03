@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1242114113224735233}
   - component: {fileID: 1242114113224735234}
   - component: {fileID: 1242114113224735235}
+  - component: {fileID: -8825821502717606253}
   m_Layer: 10
   m_Name: Heart
   m_TagString: PickUp
@@ -119,3 +120,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.17
+--- !u!114 &-8825821502717606253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242114113224735236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34c8a6a6bb385ef418a2cc26469fecac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _item: {fileID: 11400000, guid: effaabb18501be64b945f6adc4a36d3d, type: 2}
